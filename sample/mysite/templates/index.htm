@@ -1,0 +1,26 @@
+{% load cms_tags sekizai_tags %}
+<html>
+    <head>
+        <title>{% page_attribute "page_title" %}</title>
+        {% render_block "css" %}
+    </head>
+    <body>
+      <h1>My First Heading</h1>
+<p>My first paragraph.</p>
+        {% cms_toolbar %}
+        {% placeholder "content" %}
+        {% render_block "js" %}
+    </body>
+</html>
+<!-- {% load cms_tags %}
+<html>
+    <body>
+    {% cms_toolbar %}
+    {% block main %}
+    {% placeholder "main" %}
+    {% for item in object_list %}
+    {{ item }}
+{% endfor %}
+    {% endblock main %}
+    </body>
+</html> -->
