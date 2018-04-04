@@ -29,7 +29,7 @@ SECRET_KEY = 'e#5td=1c-tl8&(^5xj6al1!!9=fsezd#-vq(yg$=&2y$o#hg=4'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '10.0.0.11',
+    '10.0.0.7',
     '127.0.0.1'
 ]
 
@@ -143,7 +143,8 @@ INSTALLED_APPS = (
     'djangocms_video',
     'mysite',
     'cmsplugin_tabs',
-    # 'polls',
+    'polls',
+    'polls_cms_integration'
     # 'cms_named_menus'
 )
 
@@ -172,6 +173,7 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
+    ('quiz.html','quiz'),
     ('index.html','index'),
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
@@ -188,15 +190,16 @@ CMS_PERMISSION = True
 CMS_PLACEHOLDER_CONF = {}
 
 DATABASES = {
-    'default': {
-        'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'localhost',
-        'NAME': 'project.db',
-        'PASSWORD': '',
-        'PORT': '',
-        'USER': ''
-    }
+    'default':
+        {
+            'ENGINE': 'django.db.backends.mysql', #.sqlite3
+            'NAME': 'keblar',
+            'HOST': '127.0.0.1', 
+            'USER': 'root', 
+            'PASSWORD': 'root', 
+            'PORT': ''
+        }
+
 }
 
 MIGRATION_MODULES = {

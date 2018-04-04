@@ -1,6 +1,7 @@
 <!-- {% load cms_tags sekizai_tags %} -->
 {% cms_toolbar %}
 {% load staticfiles i18n cms_tags sekizai_tags menu_tags %}
+{% load menu_tags %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -46,7 +47,7 @@
                     <li data-target="#myCarousel" data-slide-to="1">Map</li>
                     <li data-target="#myCarousel" data-slide-to="2">Concepts</li>
                     <li data-target="#myCarousel" data-slide-to="3">Learning</li>
-                    <li data-target="#myCarousel" data-slide-to="4">Quiz</li>
+                    <!-- <li data-target="#myCarousel" data-slide-to="4">Quiz</li> -->
                 </ul>
                 <!-- <ul class="">
                     <li class="active">
@@ -318,7 +319,7 @@
                                                   </div>
                                                 </div> -->
                                     </div><!-- item -->
-                                     <div class="item quiz">    
+                                     <div class="item quiz">  
                                   
                                     <!-- <h3><span>4</span>Quiz</h3>
                           <div class="todoEjercicios ejercicioVF">
@@ -508,7 +509,7 @@
                       {
                         $(".carousel-control.left").show();
                       } 
-                      if($(".quiz").hasClass("active"))
+                      if($(".flip_page").hasClass("active"))
                       {
                         $(".carousel-control.right").hide();
                       }

@@ -9,7 +9,9 @@ class PollPluginPublisher(CMSPluginBase):
     model = PollPluginModel  # model where plugin data are saved
     module = _("Polls")
     name = _("Poll Plugin")  # name of the plugin in the interface
-    # render_template = "index.html"
+    render_template = "index.html"
+    # render_template = "templates/index.html"
+    # render_template = "polls_cms_integration/poll_plugin.html"
 
     def render(self, context, instance, placeholder):
         context.update({'instance': instance})
