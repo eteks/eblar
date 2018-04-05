@@ -28,5 +28,7 @@ Django CMS Installation:
 CMS Plugins:
 	Tab & Accordion:
 		pip install git+https://github.com/MagicSolutions/django-cmsplugin-tabs.git#egg=django-cmsplugin-tabs
+	
+	# Don't install the polls plugin. Just for referennce.
 	Polls:
 		pip install -e git+http://git@github.com/divio/django-polls.git#egg=polls

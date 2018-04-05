@@ -143,8 +143,8 @@ INSTALLED_APPS = (
     'djangocms_video',
     'mysite',
     'cmsplugin_tabs',
-    'polls',
-    'polls_cms_integration'
+    # 'polls',
+    # 'polls_cms_integration'
     # 'cms_named_menus'
 )
 
